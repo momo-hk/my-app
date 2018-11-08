@@ -1,9 +1,7 @@
 import React, {Component} from 'react';
 import {BreadcrumbConfig, NavTabConfig, SelectConfig} from 'components/config';
 import {WSNavTab, WSBreadcrumb, WSSelect} from 'components/shared';
-import {Layout} from 'antd';
-
-const {Content} = Layout;
+import './SchDetails.css';
 
 class SchDetails extends Component {
 
@@ -16,12 +14,13 @@ class SchDetails extends Component {
   }
 
   render() {
+    console.log(this.breadcrumConfig);
     return (
-      <Content className="content">
+      <div className="schDetailsDiv">
         <WSBreadcrumb config={this.breadcrumConfig} />
         <WSSelect label="學年" onChange={this.onChange} items={this.selectConfig.items} />
         <WSNavTab config={this.navTabConfig} />
-      </Content>
+      </div>
     );
   }
 }

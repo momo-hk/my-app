@@ -10,7 +10,11 @@ module.exports = function override(config, env) {
 
   config = rewireLess.withLoaderOptions({
     modifyVars: { 
+      // Base Variables
       "@font-size-base": "13px",
+
+      // Tab Variables
+      "@tabs-bar-margin": "0 0 5px 0",
     },
     javascriptEnabled: true,
     })(config, env);

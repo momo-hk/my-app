@@ -1,4 +1,7 @@
-.content {
+.schDetailsDiv {
   width: 800px;
+  border-radius: 4px;
+  /* border: 1px solid #CFD8DC; */
+  margin: 5px;
 }
 

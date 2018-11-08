@@ -1,7 +1,9 @@
 .selectDiv {
-  padding-bottom: 5px;
+  padding: 0 5px 5px 17px;
+  text-align: left;
 }
 
 .selectLabel {
   padding: 0 5px;
+  font-size: 11px;
 }

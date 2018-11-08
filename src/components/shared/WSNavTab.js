@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {Tabs} from 'antd';
 import Loadable from 'react-loadable';
+import './WSNavTab.css';
 
 const TabPane = Tabs.TabPane;
 
@@ -16,7 +17,7 @@ class NavTab extends Component {
     tabItems.forEach((item) => {
       this.setState({
         tabComponents: this.state.tabComponents.set(item.key, Loadable({
-          loader: () => import(`${item.component}`),
+          loader: () => import(`components/${item.componentPath}`),
           loading: () => <div>Loading...</div>
         }))
       });
@@ -39,9 +40,11 @@ class NavTab extends Component {
     );
     
     return (
-      <Tabs type="card" defaultActiveKey={defaultItem}>
-        {TabItems}
-      </Tabs>
+      <div className="navTabDiv">
+        <Tabs type="card" defaultActiveKey={defaultItem}>
+          {TabItems}
+        </Tabs>
+      </div>
     );
   }
 } 

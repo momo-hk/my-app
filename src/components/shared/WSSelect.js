@@ -6,7 +6,7 @@ import { Select } from 'antd';
 
 const WSSelect = (props) => {
   
-  const {label, items, onSelect} = props;
+  const {label, showText, items, onSelect} = props;
 
   const Options = items.map((item) => 
     <Select.Option value={item.value} key={item.key}>{item.value}</Select.Option>
@@ -14,7 +14,7 @@ const WSSelect = (props) => {
 
   return (
     <div className="selectDiv">
-      <span className="selectLabel">{label}</span>
+      { showText && <span className="selectLabel">{label}</span>}
       <Select
         style={{ width: 100 }}
         showSearch
@@ -31,6 +31,7 @@ const WSSelect = (props) => {
 
 WSSelect.propTypes = {
   label: PropTypes.string,
+  showText: PropTypes.bool,
   items: PropTypes.array,
   onSelect: PropTypes.func,
 }
