@@ -1,5 +1,6 @@
 import React, {Component, Fragment} from 'react';
 import {WSInput} from 'components/shared';
+import {SchMgrCommitteForm} from 'components/schModule'
 import './SchMgrCommitte.css';
 import { Table, Button } from 'antd';
 
@@ -73,7 +74,7 @@ class SchMgrCommitte extends Component {
       <div className="schMrgComitteDiv"> 
         {
           showAddComponent 
-          ? null
+          ? <SchMgrCommitteForm />
           : <Fragment>
               <WSInput label="辦學團體名稱(英)" value={sponsorEng} onChange={this.onInputChange} id='sponsorEng' />
               <WSInput label="辦學團體名稱(中)" value={sponsorChi} onChange={this.onInputChange} id='sponsorChi' />

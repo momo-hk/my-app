@@ -14,11 +14,12 @@ class SchDetails extends Component {
   }
 
   render() {
-    console.log(this.breadcrumConfig);
     return (
       <div className="schDetailsDiv">
         <WSBreadcrumb config={this.breadcrumConfig} />
-        <WSSelect label="學年" onChange={this.onChange} items={this.selectConfig.items} />
+        <div className="selectDiv">
+          <WSSelect width={200} label="學年" onChange={this.onChange} items={this.selectConfig.items} />
+        </div>
         <WSNavTab config={this.navTabConfig} />
       </div>
     );

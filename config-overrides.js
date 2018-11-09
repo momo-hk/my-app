@@ -15,6 +15,12 @@ module.exports = function override(config, env) {
 
       // Tab Variables
       "@tabs-bar-margin": "0 0 5px 0",
+
+      // Form variables
+      "@form-item-margin-bottom": "0px",
+
+      // Input variables
+      "@input-height-base": "32px",
     },
     javascriptEnabled: true,
     })(config, env);
