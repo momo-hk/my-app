@@ -1,15 +1,15 @@
-// import React from 'react';
-// import { Icon } from 'antd';
+import React from 'react';
+import { Icon } from 'antd';
 
-// const Separator = (props) => {
-//   return (
-//     <Icon type="right" theme="outlined" />
-//   );
-// }
+const Separator = (props) => {
+  return (
+    <Icon type="right" theme="outlined" />
+  );
+}
 
 const breadcrumb = {
   'schDetails': {
-    separator: '>',
+    Separator: Separator,
     items: [
       {key: '1', value: '[S-SCH04-01] 學校管理'}, 
       {key: '2', value: '學校資料'}, 

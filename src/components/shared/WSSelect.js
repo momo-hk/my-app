@@ -16,7 +16,7 @@ class WSSelect extends Component {
       <span>
         { showText && <span className="selectLabel">{label}</span>}
         <Select
-          style={{ width: 100 }}
+          style={{ width: width }}
           showSearch
           placeholder={label}
           optionFilterProp="children"
